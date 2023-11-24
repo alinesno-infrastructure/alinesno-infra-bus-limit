@@ -1,5 +1,6 @@
 package com.alinesno.infra.bus.limit.entity;
 
+import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import lombok.Data;
@@ -14,7 +15,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
  */
 @TableName("product_limit")
 @Data
-public class ProductLimitEntity {
+public class ProductLimitEntity extends InfraBaseEntity {
 
     /**
      * 商品ID

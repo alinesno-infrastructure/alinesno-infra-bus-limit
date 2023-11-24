@@ -2,6 +2,7 @@ package com.alinesno.infra.bus.limit;
 
 import com.alinesno.infra.common.facade.enable.EnableActable;
 import com.alinesno.infra.common.web.adapter.sso.enable.EnableInfraSsoApi;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -13,7 +14,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  */
 @EnableActable
 @EnableInfraSsoApi
-@SpringBootApplication()
+@SpringBootApplication
+@MapperScan("com.alinesno.infra.bus.limit.mapper")
 public class BusLimitApplication {
 
 	public static void main(String[] args) {

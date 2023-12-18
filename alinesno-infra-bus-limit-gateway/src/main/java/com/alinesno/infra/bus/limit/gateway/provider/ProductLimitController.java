@@ -1,4 +1,4 @@
-package com.alinesno.infra.bus.limit.api.provider;
+package com.alinesno.infra.bus.limit.gateway.provider;
 
 /**
  * 大批量请求接口请求

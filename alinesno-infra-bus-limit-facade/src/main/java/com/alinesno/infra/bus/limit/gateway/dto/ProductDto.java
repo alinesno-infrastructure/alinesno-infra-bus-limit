@@ -1,4 +1,4 @@
-package com.alinesno.infra.bus.limit.api.dto;
+package com.alinesno.infra.bus.limit.gateway.dto;
 
 /**
  *

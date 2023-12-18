@@ -1,7 +1,7 @@
-package com.alinesno.infra.bus.limit.api.controller;
+package com.alinesno.infra.bus.limit.gateway.controller;
 
-import com.alinesno.infra.bus.limit.entity.SuccessKilledEntity;
-import com.alinesno.infra.bus.limit.service.ISuccessKilledService;
+import com.alinesno.infra.bus.limit.entity.SeckillEntity;
+import com.alinesno.infra.bus.limit.service.ISeckillService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -20,26 +20,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与SuccessKilledEntity相关的请求的Controller。
- * 继承自BaseController类并实现ISuccessKilledService接口。
+ * 处理与SeckillEntity相关的请求的Controller。
+ * 继承自BaseController类并实现ISeckillService接口。
  *
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-@Api(tags = "SuccessKilled")
+@Api(tags = "Seckill")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/bus/limit/success_killed")
-public class SuccessKilledController extends BaseController<SuccessKilledEntity, ISuccessKilledService> {
+@RequestMapping("/api/infra/bus/limit/seckill")
+public class SeckillController extends BaseController<SeckillEntity, ISeckillService> {
 
     // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(SuccessKilledController.class);
+    private static final Logger log = LoggerFactory.getLogger(SeckillController.class);
 
     @Autowired
-    private ISuccessKilledService service;
+    private ISeckillService service;
 
     /**
-     * 获取SuccessKilledEntity的DataTables数据。
+     * 获取SeckillEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -54,7 +54,7 @@ public class SuccessKilledController extends BaseController<SuccessKilledEntity,
     }
 
     @Override
-    public ISuccessKilledService getFeign() {
+    public ISeckillService getFeign() {
         return this.service;
     }
 }

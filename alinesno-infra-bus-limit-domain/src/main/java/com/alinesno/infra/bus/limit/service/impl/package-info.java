@@ -1,1 +1,1 @@
-package com.alinesno.infra.bus.limit.api.provider;
+package com.alinesno.infra.bus.limit.gateway.provider;

@@ -1,7 +1,7 @@
-package com.alinesno.infra.bus.limit.api.controller;
+package com.alinesno.infra.bus.limit.gateway.controller;
 
-import com.alinesno.infra.bus.limit.entity.LimitApplicationEntity;
-import com.alinesno.infra.bus.limit.service.ILimitApplicationService;
+import com.alinesno.infra.bus.limit.entity.SuccessKilledEntity;
+import com.alinesno.infra.bus.limit.service.ISuccessKilledService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -11,34 +11,35 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与LimitApplicationEntity相关的请求的Controller。
- * 继承自BaseController类并实现ILimitApplicationService接口。
- * 
+ * 处理与SuccessKilledEntity相关的请求的Controller。
+ * 继承自BaseController类并实现ISuccessKilledService接口。
+ *
+ * @author LuoXiaoDong
  * @version 1.0.0
  */
-@Api(tags = "LimitApplication")
+@Api(tags = "SuccessKilled")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/bus/limit/limit_application")
-public class LimitApplicationController extends BaseController<LimitApplicationEntity, ILimitApplicationService> {
+@RequestMapping("/api/infra/bus/limit/success_killed")
+public class SuccessKilledController extends BaseController<SuccessKilledEntity, ISuccessKilledService> {
 
     // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(LimitApplicationController.class);
+    private static final Logger log = LoggerFactory.getLogger(SuccessKilledController.class);
 
     @Autowired
-    private ILimitApplicationService service;
+    private ISuccessKilledService service;
 
     /**
-     * 获取LimitApplicationEntity的DataTables数据。
+     * 获取SuccessKilledEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -53,7 +54,7 @@ public class LimitApplicationController extends BaseController<LimitApplicationE
     }
 
     @Override
-    public ILimitApplicationService getFeign() {
+    public ISuccessKilledService getFeign() {
         return this.service;
     }
 }

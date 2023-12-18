@@ -1,7 +1,7 @@
-package com.alinesno.infra.bus.limit.api.controller;
+package com.alinesno.infra.bus.limit.gateway.controller;
 
-import com.alinesno.infra.bus.limit.entity.ProductLimitEntity;
-import com.alinesno.infra.bus.limit.service.IProductLimitService;
+import com.alinesno.infra.bus.limit.entity.LimitApplicationEntity;
+import com.alinesno.infra.bus.limit.service.ILimitApplicationService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -20,25 +20,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与ProductLimitEntity相关的请求的Controller。
- * 继承自BaseController类并实现IProductLimitService接口。
+ * 处理与LimitApplicationEntity相关的请求的Controller。
+ * 继承自BaseController类并实现ILimitApplicationService接口。
  * 
  * @version 1.0.0
  */
-@Api(tags = "ProductLimit")
+@Api(tags = "LimitApplication")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/bus/limit/product_limit")
-public class ProductLimitController extends BaseController<ProductLimitEntity, IProductLimitService> {
+@RequestMapping("/api/infra/bus/limit/limit_application")
+public class LimitApplicationController extends BaseController<LimitApplicationEntity, ILimitApplicationService> {
 
     // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(ProductLimitController.class);
+    private static final Logger log = LoggerFactory.getLogger(LimitApplicationController.class);
 
     @Autowired
-    private IProductLimitService service;
+    private ILimitApplicationService service;
 
     /**
-     * 获取ProductLimitEntity的DataTables数据。
+     * 获取LimitApplicationEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -53,7 +53,7 @@ public class ProductLimitController extends BaseController<ProductLimitEntity, I
     }
 
     @Override
-    public IProductLimitService getFeign() {
+    public ILimitApplicationService getFeign() {
         return this.service;
     }
 }

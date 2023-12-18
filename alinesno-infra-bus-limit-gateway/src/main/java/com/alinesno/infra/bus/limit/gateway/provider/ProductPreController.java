@@ -1,6 +1,6 @@
-package com.alinesno.infra.bus.limit.api.provider;
+package com.alinesno.infra.bus.limit.gateway.provider;
 
-import com.alinesno.infra.bus.limit.api.dto.ProductDto;
+import com.alinesno.infra.bus.limit.gateway.dto.ProductDto;
 import com.alinesno.infra.common.facade.response.AjaxResult;
 
 import java.util.List;

@@ -10,7 +10,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-bus-limit-api</artifactId>
+	<artifactId>alinesno-infra-bus-limit-gateway</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>

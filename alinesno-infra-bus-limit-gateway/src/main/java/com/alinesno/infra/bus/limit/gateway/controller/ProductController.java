@@ -1,4 +1,4 @@
-package com.alinesno.infra.bus.limit.api.controller;
+package com.alinesno.infra.bus.limit.gateway.controller;
 
 import com.alinesno.infra.bus.limit.entity.ProductEntity;
 import com.alinesno.infra.bus.limit.service.IProductService;
